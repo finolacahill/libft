@@ -6,7 +6,7 @@
 /*   By: fcahill <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 13:47:58 by fcahill           #+#    #+#             */
-/*   Updated: 2018/11/21 16:32:11 by fcahill          ###   ########.fr       */
+/*   Updated: 2018/11/22 12:29:28 by fcahill          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@ void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
 	if ((lst == NULL) || (f == NULL))
 		return ;
-	f(lst);
-	ft_lstiter(lst->next, f);
+	while (lst)
+	{
+		f(lst);
+		lst = lst->next;
+	}
 }

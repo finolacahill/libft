@@ -6,7 +6,7 @@
 /*   By: fcahill <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 21:09:18 by fcahill           #+#    #+#             */
-/*   Updated: 2018/11/16 12:03:23 by fcahill          ###   ########.fr       */
+/*   Updated: 2018/11/22 17:14:55 by fcahill          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd('-', fd);
 		n = -n;
 	}
-	if (n > 10)
+	if (n >= 10)
 		ft_putnbr_fd(n / 10, fd);
 	ft_putchar_fd((n % 10 + '0'), fd);
 }

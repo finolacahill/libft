@@ -6,7 +6,7 @@
 /*   By: fcahill <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 13:25:10 by fcahill           #+#    #+#             */
-/*   Updated: 2018/11/21 16:28:17 by fcahill          ###   ########.fr       */
+/*   Updated: 2018/11/22 13:16:58 by fcahill          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ t_list		*ft_lstnew(void const *newcontent, size_t content_size)
 		free(newlist);
 		return (NULL);
 	}
-	ft_strcpy(newlist->content, newcontent);
+	ft_memcpy(newlist->content, newcontent, content_size);
+	newlist->content_size = content_size;
 	newlist->next = NULL;
 	return (newlist);
 }

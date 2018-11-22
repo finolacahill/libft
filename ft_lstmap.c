@@ -6,7 +6,7 @@
 /*   By: fcahill <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 15:28:20 by fcahill           #+#    #+#             */
-/*   Updated: 2018/11/21 16:33:20 by fcahill          ###   ########.fr       */
+/*   Updated: 2018/11/22 13:58:11 by fcahill          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	newlist = ft_lstnew(tmp->content, tmp->content_size);
 	head = newlist;
 	lst = lst->next;
-	while (lst != NULL)
+	while (lst)
 	{
 		tmp = f(lst);
 		newlist->next = ft_lstnew(tmp->content, tmp->content_size);
