@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcahill <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 16:28:50 by fcahill           #+#    #+#             */
-/*   Updated: 2018/11/22 16:29:54 by fcahill          ###   ########.fr       */
+/*   Created: 2018/11/22 20:18:30 by fcahill           #+#    #+#             */
+/*   Updated: 2018/11/22 20:28:04 by fcahill          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,15 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	i = 0;
 	if (n == 0)
 		return (0);
-	while ((str2[i] != (unsigned char)c) && (i < n))
+	while (i < n)
 	{
 		str1[i] = str2[i];
+		if (str2[i] == (unsigned char)c)
+		{
+			str1[i] = str2[i];
+			return (void*)(dst + i + 1);
+		}
 		i++;
-	}
-	if (str2[i] == (unsigned char)c)
-	{
-		str1[i] = str2[i];
-		return (void*)(dst + i + 1);
 	}
 	return (NULL);
 }

@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcahill <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 17:20:24 by fcahill           #+#    #+#             */
-/*   Updated: 2018/11/23 16:39:35 by fcahill          ###   ########.fr       */
+/*   Created: 2018/11/05 19:42:44 by fcahill           #+#    #+#             */
+/*   Updated: 2018/11/23 17:07:23 by fcahill          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+int		ft_factorial(int nb)
 {
-	if (len == 0)
-		return (dst);
-	if (src < dst)
-		ft_revmemcpy(dst, src, len);
-	if (src > dst)
-		ft_memcpy(dst, src, len);
-	return (dst);
+	if ((nb < 0 || nb > 12))
+		return (0);
+	if ((nb == 0 || nb == 1))
+		return (1);
+	return (nb * ft_factorial(nb - 1));
 }

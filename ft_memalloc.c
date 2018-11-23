@@ -6,7 +6,7 @@
 /*   By: fcahill <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 10:28:28 by fcahill           #+#    #+#             */
-/*   Updated: 2018/11/21 13:59:55 by fcahill          ###   ########.fr       */
+/*   Updated: 2018/11/23 16:51:56 by fcahill          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ void	*ft_memalloc(size_t size)
 	if (!(ptr = malloc(size)))
 		return (NULL);
 	ft_bzero(ptr, size);
-	return (void*)(ptr);
+	return (ptr);
 }

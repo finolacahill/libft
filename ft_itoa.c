@@ -6,7 +6,7 @@
 /*   By: fcahill <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 16:03:04 by fcahill           #+#    #+#             */
-/*   Updated: 2018/11/21 17:25:01 by fcahill          ###   ########.fr       */
+/*   Updated: 2018/11/23 17:00:53 by fcahill          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char			*ft_itoa(int n)
 	j = n;
 	while ((j / 10 != 0) && (i++ || 1))
 		j = j / 10;
-	if (!(str = malloc(sizeof(char) * i + 2)))
+	if (!(str = (char *)malloc(sizeof(char) * i + 2)))
 		return (NULL);
 	if ((n < 0) && (i++ || 1))
 	{
