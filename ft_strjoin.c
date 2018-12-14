@@ -6,7 +6,7 @@
 /*   By: fcahill <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 17:29:34 by fcahill           #+#    #+#             */
-/*   Updated: 2018/11/23 16:59:24 by fcahill          ###   ########.fr       */
+/*   Updated: 2018/12/11 21:35:32 by fcahill          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	j = 0;
 	if ((!s1) || (!s2))
 		return (0);
-	if (!(fresh = (char *)malloc(sizeof(char) * (ft_strlen(s1)
-						+ ft_strlen(s2)))))
+	if (!(fresh = (char *)malloc(sizeof(char) * ((ft_strlen(s1)
+						+ ft_strlen(s2) + 1)))))
 		return (NULL);
 	while (s1[i] != '\0')
 	{
