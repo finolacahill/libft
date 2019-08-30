@@ -5,7 +5,7 @@ Final grade 123/100
 
 ### The Challenge 
 This first project after the entrance piscine at 42 marks the beginning of our training to become a software engineer. The goal is to code a library of useful functions that we will be allowed to reuse in most of our C
-projects this year. 
+projects this year. A full list of the functions we must rewrite can be found in the [PDF of the subject](https://github.com/finolacahill/libft/blob/master/libft.en.pdf)
 ### Learning objectives 
 This project makes you take the time to re-write the basic neceessary functions of the C library, understand them wholly, and learn to use them. 
 It also demands rigour with regards to testing, and attention to detail. Beyond the required functions, we are also given the opportunity to expand the list of functions
