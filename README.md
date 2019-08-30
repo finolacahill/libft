@@ -10,9 +10,9 @@ It also demands rigour with regards to testing, and attention to detail. Beyond 
 with our own and encouraged to continue to add to the library througout the year.
 
 #### N.B.
-I have since added the get_next_line fuction from [this project](https://github.com/finolacahill/get_next_line) and the ft_printf function from [this project].(https://github.com/finolacahill/printf)
+I have since added the get_next_line fuction from [this project](https://github.com/finolacahill/get_next_line) and the ft_printf function from [this project.](https://github.com/finolacahill/printf)
 ### Usage
-The *make* command will compile the library to libft.a
+The *make* command will compile the library to libft.a\n
 The *make clean* command will delete the .o files. 
 The *make fclean* command will delete the .o files and the libft.a file. 
 The *make re* will re compile the library. 
